@@ -292,12 +292,13 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 end)
 
 minetest.register_on_joinplayer(function(player)
-	default.player_set_model(player, "3d_armor_character.b3d")
-	minetest.after(0, function(player)
-		if init_player_armor(player) == false then
-			pending_players[player] = 0
-		end
-	end, player)
+      player:set_properties({hp_max = 100})
+      default.player_set_model(player, "3d_armor_character.b3d")
+      minetest.after(0, function(player)
+                        if init_player_armor(player) == false then
+                           pending_players[player] = 0
+                        end
+                        end, player)
 end)
 
 minetest.register_on_leaveplayer(function(player)
@@ -376,7 +377,7 @@ minetest.register_on_player_hpchange(function(player, hp_change)
 		if name then
 			local heal = armor.def[name].heal
 			if heal >= math.random(100) then
-				hp_change = 0
+				hp_change = -1
 			end
 			-- check if armor damage was handled by fire or on_punchplayer
 			local time = last_punch_time[name] or 0
