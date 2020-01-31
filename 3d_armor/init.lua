@@ -292,7 +292,7 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 end)
 
 minetest.register_on_joinplayer(function(player)
-      player:set_properties({hp_max = 100})
+      -- player:set_properties({hp_max = 100})
       default.player_set_model(player, "3d_armor_character.b3d")
       minetest.after(0, function(player)
                         if init_player_armor(player) == false then
@@ -385,6 +385,9 @@ minetest.register_on_player_hpchange(function(player, hp_change)
 				armor:punch(player)
 			end
 		end
+	end
+        if hp_change == 0 then
+	   hp_change = -1
 	end
 	return hp_change
 end, true)
