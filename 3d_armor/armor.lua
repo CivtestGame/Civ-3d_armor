@@ -311,6 +311,111 @@ if armor.materials.crystal then
 	})
 end
 
+if armor.materials.tin then
+	armor:register_armor("3d_armor:helmet_tin", {
+		description = S("Tin Helmet"),
+		inventory_image = "3d_armor_inv_helmet_tin.png",
+		groups = {armor_head=1, armor_heal=0, armor_use=400,
+			physics_speed=-0.01, physics_gravity=0.01},
+		armor_groups = {fleshy=10},
+		damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+	})
+	armor:register_armor("3d_armor:chestplate_tin", {
+		description = S("Tin Chestplate"),
+		inventory_image = "3d_armor_inv_chestplate_tin.png",
+		groups = {armor_torso=1, armor_heal=0, armor_use=400,
+			physics_speed=-0.04, physics_gravity=0.04},
+		armor_groups = {fleshy=15},
+		damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+	})
+	armor:register_armor("3d_armor:leggings_tin", {
+		description = S("Tin Leggings"),
+		inventory_image = "3d_armor_inv_leggings_tin.png",
+		groups = {armor_legs=1, armor_heal=0, armor_use=400,
+			physics_speed=-0.03, physics_gravity=0.03},
+		armor_groups = {fleshy=15},
+		damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+	})
+	armor:register_armor("3d_armor:boots_tin", {
+		description = S("Tin Boots"),
+		inventory_image = "3d_armor_inv_boots_tin.png",
+		groups = {armor_feet=1, armor_heal=0, armor_use=400,
+			physics_speed=-0.01, physics_gravity=0.01},
+		armor_groups = {fleshy=10},
+		damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+	})
+end
+
+if armor.materials.copper then
+	armor:register_armor("3d_armor:helmet_copper", {
+		description = S("Copper Helmet"),
+		inventory_image = "3d_armor_inv_helmet_copper.png",
+		groups = {armor_head=1, armor_heal=0, armor_use=400,
+			physics_speed=-0.01, physics_gravity=0.01},
+		armor_groups = {fleshy=10},
+		damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+	})
+	armor:register_armor("3d_armor:chestplate_copper", {
+		description = S("Copper Chestplate"),
+		inventory_image = "3d_armor_inv_chestplate_copper.png",
+		groups = {armor_torso=1, armor_heal=0, armor_use=400,
+			physics_speed=-0.04, physics_gravity=0.04},
+		armor_groups = {fleshy=15},
+		damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+	})
+	armor:register_armor("3d_armor:leggings_copper", {
+		description = S("Copper Leggings"),
+		inventory_image = "3d_armor_inv_leggings_copper.png",
+		groups = {armor_legs=1, armor_heal=0, armor_use=400,
+			physics_speed=-0.03, physics_gravity=0.03},
+		armor_groups = {fleshy=15},
+		damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+	})
+	armor:register_armor("3d_armor:boots_copper", {
+		description = S("Copper Boots"),
+		inventory_image = "3d_armor_inv_boots_copper.png",
+		groups = {armor_feet=1, armor_heal=0, armor_use=400,
+			physics_speed=-0.01, physics_gravity=0.01},
+		armor_groups = {fleshy=10},
+		damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+	})
+end
+
+if armor.materials.iron then
+	armor:register_armor("3d_armor:helmet_iron", {
+		description = S("Iron Helmet"),
+		inventory_image = "3d_armor_inv_helmet_iron.png",
+		groups = {armor_head=1, armor_heal=0, armor_use=400,
+			physics_speed=-0.01, physics_gravity=0.01},
+		armor_groups = {fleshy=10},
+		damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+	})
+	armor:register_armor("3d_armor:chestplate_iron", {
+		description = S("Iron Chestplate"),
+		inventory_image = "3d_armor_inv_chestplate_iron.png",
+		groups = {armor_torso=1, armor_heal=0, armor_use=400,
+			physics_speed=-0.04, physics_gravity=0.04},
+		armor_groups = {fleshy=15},
+		damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+	})
+	armor:register_armor("3d_armor:leggings_iron", {
+		description = S("Iron Leggings"),
+		inventory_image = "3d_armor_inv_leggings_iron.png",
+		groups = {armor_legs=1, armor_heal=0, armor_use=400,
+			physics_speed=-0.03, physics_gravity=0.03},
+		armor_groups = {fleshy=15},
+		damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+	})
+	armor:register_armor("3d_armor:boots_iron", {
+		description = S("Iron Boots"),
+		inventory_image = "3d_armor_inv_boots_iron.png",
+		groups = {armor_feet=1, armor_heal=0, armor_use=400,
+			physics_speed=-0.01, physics_gravity=0.01},
+		armor_groups = {fleshy=10},
+		damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+	})
+end
+
 for k, v in pairs(armor.materials) do
 	minetest.register_craft({
 		output = "3d_armor:helmet_"..k,
