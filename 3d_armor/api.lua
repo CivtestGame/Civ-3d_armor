@@ -263,9 +263,9 @@ armor.set_player_armor = function(self, player)
 	for group, level in pairs(levels) do
 		if level > 0 then
 			level = level * armor.config.level_multiplier
-			if material.name and material.count == #self.elements then
-				level = level * 1.1
-			end
+			-- if material.name and material.count == #self.elements then
+			-- 	level = level * 1.1
+			-- end
 		end
 		local base = self.registered_groups[group]
 		self.def[name].groups[group] = level
