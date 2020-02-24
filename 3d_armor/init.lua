@@ -346,6 +346,8 @@ if armor.config.drop == true or armor.config.destroy == true then
 					for _,stack in ipairs(drop) do
 						if inv:room_for_item("main", stack) then
 							inv:add_item("main", stack)
+						elseif inv:room_for_item("main2", stack) then
+							inv:add_item("main2", stack)
 						else
 							armor.drop_armor(pos, stack)
 						end

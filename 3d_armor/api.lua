@@ -38,9 +38,7 @@ armor = {
 		default.gui_bg..
 		default.gui_bg_img..
 		default.gui_slots..
-		default.get_hotbar_bg(0, 4.7)..
-		"list[current_player;main;0,4.7;8,1;]"..
-		"list[current_player;main;0,5.85;8,3;8]",
+		default.get_hotbar_bg(0, 4.7),
 	def = armor_def,
 	textures = armor_textures,
 	default_skin = "character",
@@ -430,6 +428,8 @@ armor.get_armor_formspec = function(self, name, listring)
 		"list[detached:"..name.."_armor;armor;0,0.5;2,3;]"
 	if listring == true then
 		formspec = formspec.."listring[current_player;main]"..
+			"listring[detached:"..name.."_armor;armor]"..
+			"listring[current_player;main2]"..
 			"listring[detached:"..name.."_armor;armor]"
 	end
 	formspec = formspec:gsub("armor_preview", armor.textures[name].preview)

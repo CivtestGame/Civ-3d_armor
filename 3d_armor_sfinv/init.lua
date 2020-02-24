@@ -11,7 +11,7 @@ sfinv.register_page("3d_armor:armor", {
 	get = function(self, player, context)
 		local name = player:get_player_name()
 		local formspec = armor:get_armor_formspec(name, true)
-		return sfinv.make_formspec(player, context, formspec, false)
+		return sfinv.make_formspec(player, context, formspec, true)
 	end
 })
 armor:register_on_update(function(player)
