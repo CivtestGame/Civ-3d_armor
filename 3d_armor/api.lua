@@ -404,6 +404,8 @@ armor.get_player_skin = function(self, name)
 		return u_skins.u_skins[name]..".png"
 	elseif self.skin_mod == "wardrobe" and wardrobe.playerSkins and wardrobe.playerSkins[name] then
 		return wardrobe.playerSkins[name]
+	elseif self.skin_mod == "civskins" then
+		return civskins.get_skin(name)
 	end
 	return armor.default_skin..".png"
 end
