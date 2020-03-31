@@ -311,6 +311,39 @@ armor.set_player_armor = function(self, player)
 	self:update_player_visuals(player)
 end
 
+local function get_tool_idx(item, invlist_tab)
+   for idx, stack in ipairs(invlist_tab) do
+      if not stack:is_empty()
+         and stack:get_name() == item:get_name()
+      then
+         return stack, idx
+      end
+   end
+end
+
+local function delayed_set_wear(hitter, item, uses)
+   -- This hack is needed because Minetest doesn't currently invoke
+   -- `minetest.get_hit_params` for us to override its default wear.
+   -- So, we delay the durability application, overruling MT.
+   minetest.after(
+      0.5,
+      function()
+         if hitter:get_wielded_item():get_name() == item:get_name() then
+            item:add_wear(65535 / uses)
+            hitter:set_wielded_item(item)
+         else
+            local inv = hitter:get_inventory()
+            local hotbar = inv:get_list("main")
+            local item2, tool_idx = get_tool_idx(item, hotbar)
+            if tool_idx then
+               item2:add_wear(65535 / uses)
+               inv:set_stack("main", tool_idx, item2)
+            end
+         end
+
+   end)
+end
+
 armor.punch = function(self, player, hitter, time_from_last_punch, tool_capabilities)
 	local name, armor_inv = self:get_valid_player(player, "[punch]")
 	if not name then
@@ -351,7 +384,7 @@ armor.punch = function(self, player, hitter, time_from_last_punch, tool_capabili
 								local dt = time_from_last_punch or 0
 								if dt > time / diff then
 									if caps.uses then
-										uses = caps.uses * math.pow(3, diff)
+										uses = caps.uses
 									end
 									damage = true
 									break
@@ -360,16 +393,12 @@ armor.punch = function(self, player, hitter, time_from_last_punch, tool_capabili
 						end
 					end
 				end
-				if damage == true and recip == true and hitter and
-						def.reciprocate_damage == true and uses > 0 then
-					local item = hitter:get_wielded_item()
-					if item and item:get_name() ~= "" then
-						item:add_wear(65535 / uses)
-						hitter:set_wielded_item(item)
-					end
-					-- reciprocate tool damage only once
-					recip = false
-				end
+                                if damage and hitter and uses > 0 then
+                                   local item = hitter:get_wielded_item()
+                                   if item and item:get_name() ~= "" then
+                                      delayed_set_wear(hitter, item, uses)
+                                   end
+                                end
 			end
 			if damage == true and hitter == "fire" then
 				damage = minetest.get_item_group(name, "flammable") > 0
