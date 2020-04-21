@@ -45,16 +45,17 @@ armor = {
 	materials = {
 		wood = "group:wood",
 		cactus = "default:cactus",
-		steel = "default:steel_ingot",
-                fine_steel = "default:fine_steel_ingot",
 		bronze = "default:bronze_ingot",
-		diamond = "default:diamond",
-		gold = "default:gold_ingot",
 		tin = "default:tin_ingot",
 		copper = "default:copper_ingot",
+		gold = "default:gold_ingot",
+		cloth = "group:wool"
+	},
+	materials_advanced = {
 		iron = "default:iron_ingot",
-		mithril = "moreores:mithril_ingot",
-		crystal = "ethereal:crystal_ingot",
+		wrought_iron = "default:wrought_iron_ingot",
+		steel = "default:steel_ingot",
+		fine_steel = "default:fine_steel_ingot"
 	},
 	fire_nodes = {
 		{"default:lava_source",     5, 8},

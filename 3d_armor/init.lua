@@ -38,6 +38,9 @@ end
 if minetest.global_exists("ARMOR_MATERIALS") then
 	armor.materials = table.copy(ARMOR_MATERIALS)
 end
+if minetest.global_exists("ARMOR_MATERIALS_ADVANCED") then
+	armor.materials_advanced = table.copy(ARMOR_MATERIALS_ADVANCED)
+end
 if minetest.global_exists("ARMOR_FIRE_NODES") then
 	armor.fire_nodes = table.copy(ARMOR_FIRE_NODES)
 end
@@ -59,6 +62,12 @@ for material, _ in pairs(armor.materials) do
 	local key = "material_"..material
 	if armor.config[key] == false then
 		armor.materials[material] = nil
+	end
+end
+for material, _ in pairs(armor.materials_advanced) do
+	local key = "material_advanced_"..material
+	if armor.config[key] == false then
+		armor.materials_advanced[material] = nil
 	end
 end
 
