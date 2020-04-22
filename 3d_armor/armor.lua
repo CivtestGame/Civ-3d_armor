@@ -605,22 +605,22 @@ armor:register_armor("3d_armor:leggings_steel", {
 	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
 })
 
-armor:register_armor("3d_armor:chestplate_fine_steel", {
-	description = S("Legacy Fine Steel Chestplate"),
-	inventory_image = "3d_armor_inv_chestplate_fine_steel_plate.png",
-	groups = {armor_torso=1, armor_heal=0, armor_use=200,
-		physics_speed=-0.04, physics_gravity=0.04},
-	armor_groups = {fleshy=24},
-	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
-})
-armor:register_armor("3d_armor:leggings_fine_steel", {
-	description = S("Legacy Fine Steel Leggings"),
-	inventory_image = "3d_armor_inv_leggings_fine_steel_plate.png",
-	groups = {armor_legs=1, armor_heal=0, armor_use=200,
-		physics_speed=-0.03, physics_gravity=0.03},
-	armor_groups = {fleshy=24},
-	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
-})
+-- armor:register_armor("3d_armor:chestplate_fine_steel", {
+-- 	description = S("Legacy Fine Steel Chestplate"),
+-- 	inventory_image = "3d_armor_inv_chestplate_fine_steel_plate.png",
+-- 	groups = {armor_torso=1, armor_heal=0, armor_use=200,
+-- 		physics_speed=-0.04, physics_gravity=0.04},
+-- 	armor_groups = {fleshy=24},
+-- 	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+-- })
+-- armor:register_armor("3d_armor:leggings_fine_steel", {
+-- 	description = S("Legacy Fine Steel Leggings"),
+-- 	inventory_image = "3d_armor_inv_leggings_fine_steel_plate.png",
+-- 	groups = {armor_legs=1, armor_heal=0, armor_use=200,
+-- 		physics_speed=-0.03, physics_gravity=0.03},
+-- 	armor_groups = {fleshy=24},
+-- 	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+-- })
 
 for k, v in pairs(armor.materials) do
 	minetest.register_craft({
