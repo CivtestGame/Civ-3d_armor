@@ -505,20 +505,69 @@ armor:register_armor("3d_armor:boots_leather", {
 	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
 })
 
+armor:register_armor("3d_armor:boots_leather_black", {
+	description = S("Black Leather Boots"),
+	inventory_image = "3d_armor_inv_boots_leather_black.png",
+	groups = {armor_feet=1, armor_heal=0, armor_use=750,
+		physics_speed=0.09, physics_gravity=-0.05},
+	armor_groups = {fleshy=12},
+	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+})
+
+armor:register_armor("3d_armor:boots_walking", {
+	description = S("Walking Boots"),
+	inventory_image = "3d_armor_inv_boots_walking.png",
+	groups = {armor_feet=1, armor_heal=0, armor_use=1000,
+		physics_speed=0.15, physics_gravity=-0.05},
+	armor_groups = {fleshy=6},
+	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+})
+
 armor:register_armor("3d_armor:jacket_generals", {
 	description = S("General's Jacket"),
 	inventory_image = "3d_armor_inv_jacket_generals.png",
-	groups = {armor_torso=1, armor_heal=0, armor_use=600},
+	groups = {armor_torso=1, armor_heal=0, armor_use=750},
 	armor_groups = {fleshy=24, pierce=6, slash=6, bludgeon=6},
 	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
 })
 armor:register_armor("3d_armor:trousers_generals", {
 	description = S("General's Trousers"),
 	inventory_image = "3d_armor_inv_trousers_generals.png",
-	groups = {armor_legs=1, armor_heal=0, armor_use=600},
+	groups = {armor_legs=1, armor_heal=0, armor_use=750},
 	armor_groups = {fleshy=20, pierce=5, slash=5, bludgeon=5},
 	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
 })
+
+armor:register_armor("3d_armor:hat_outlaws", {
+	description = S("Outlaw's Hat"),
+	inventory_image = "3d_armor_inv_hat_outlaws.png",
+	groups = {armor_head=1, armor_heal=0, armor_use=750},
+	armor_groups = {fleshy=12},
+	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+})
+armor:register_armor("3d_armor:jacket_outlaws", {
+	description = S("Outlaw's Jacket"),
+	inventory_image = "3d_armor_inv_jacket_outlaws.png",
+	groups = {armor_torso=1, armor_heal=0, armor_use=750},
+	armor_groups = {fleshy=24, pierce=5, slash=5, bludgeon=5},
+	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+})
+armor:register_armor("3d_armor:trousers_outlaws", {
+	description = S("Outlaw's Trousers"),
+	inventory_image = "3d_armor_inv_trousers_outlaws.png",
+	groups = {armor_legs=1, armor_heal=0, armor_use=750},
+	armor_groups = {fleshy=20, pierce=4, slash=4, bludgeon=4},
+	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+})
+
+armor:register_armor("3d_armor:hat_turban", {
+	description = S("Turban"),
+	inventory_image = "3d_armor_inv_hat_turban.png",
+	groups = {armor_head=1, armor_heal=0, armor_use=750},
+	armor_groups = {fleshy=12},
+	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+})
+
 
 --- LEGACY ARMOUR
 
@@ -606,3 +655,68 @@ for k, v in pairs(armor.materials) do
 		},
 	})
 end
+
+minetest.register_craft({
+	output = "3d_armor:boots_leather",
+	recipe = {
+		{"mobs:leather", "", "mobs:leather"},
+		{"mobs:leather", "", "mobs:leather"},
+	},
+})
+
+minetest.register_craft({
+	output = "3d_armor:boots_leather_black",
+	recipe = {
+		{"mobs:leather", "dye:black", "mobs:leather"},
+		{"mobs:leather", "", "mobs:leather"},
+	},
+})
+
+minetest.register_craft({
+	output = "3d_armor:boots_walking",
+	recipe = {
+		{"default:comp_fabric", "", "default:comp_fabric"},
+		{"mobs:leather", "", "mobs:leather"},
+	},
+})
+
+minetest.register_craft({
+	output = "3d_armor:jacket_generals",
+	recipe = {
+		{"default:comp_fabric", "dye:blue", "default:comp_fabric"},
+		{"default:comp_fabric", "default:brass_ingot", "default:comp_fabric"},
+		{"default:comp_fabric", "default:brass_ingot", "default:comp_fabric"},
+	},
+})
+minetest.register_craft({
+	output = "3d_armor:trousers_generals",
+	recipe = {
+		{"default:comp_fabric", "group:metal_ingot", "default:comp_fabric"},
+		{"default:comp_fabric", "dye:blue", "default:comp_fabric"},
+		{"default:comp_fabric", "", "default:comp_fabric"},
+	},
+})
+
+minetest.register_craft({
+	output = "3d_armor:hat_outlaws",
+	recipe = {
+		{"", "mobs:leather", ""},
+		{"mobs:leather", "group:metal_ingot", "mobs:leather"},
+	},
+})
+minetest.register_craft({
+	output = "3d_armor:jacket_outlaws",
+	recipe = {
+		{"mobs:leather", "dye:red", "mobs:leather"},
+		{"default:comp_fabric", "mobs:leather", "default:comp_fabric"},
+		{"default:comp_fabric", "mobs:leather", "default:comp_fabric"},
+	},
+})
+minetest.register_craft({
+	output = "3d_armor:trousers_outlaws",
+	recipe = {
+		{"default:comp_fabric", "group:metal_ingot", "default:comp_fabric"},
+		{"mobs:leather", "", "mobs:leather"},
+		{"mobs:leather", "", "mobs:leather"},
+	},
+})
