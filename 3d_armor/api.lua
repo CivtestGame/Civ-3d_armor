@@ -53,7 +53,6 @@ armor = {
 	},
 	materials_advanced = {
 		iron = "default:iron_ingot",
-		wrought_iron = "default:wrought_iron_ingot",
 		steel = "default:steel_ingot",
 		fine_steel = "default:fine_steel_ingot"
 	},
