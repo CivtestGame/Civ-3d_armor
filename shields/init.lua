@@ -110,7 +110,7 @@ if armor.materials.cactus then
 	})
 end
 
-if armor.materials.steel then
+if armor.materials.steel or armor.materials_advanced.steel then
 	armor:register_armor("shields:shield_steel", {
 		description = S("Steel Shield"),
 		inventory_image = "shields_inv_shield_steel.png",
@@ -215,13 +215,26 @@ if armor.materials.crystal then
 	})
 end
 
-for k, v in pairs(armor.materials) do
-	minetest.register_craft({
-		output = "shields:shield_"..k,
-		recipe = {
-			{v, v, v},
-			{v, v, v},
-			{"", v, ""},
-		},
-	})
+local function generate_shield_craft(materials)
+   if not materials then
+      return
+   end
+
+   for k, v in pairs(materials) do
+      local shield_name = "shields:shield_"..k
+
+      if minetest.registered_items[shield_name] then
+         minetest.register_craft({
+               output = shield_name,
+               recipe = {
+                  {v, v, v},
+                  {v, v, v},
+                  {"", v, ""},
+               },
+         })
+      end
+   end
 end
+
+generate_shield_craft(armor.materials)
+generate_shield_craft(armor.materials_advanced)
