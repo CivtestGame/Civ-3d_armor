@@ -523,6 +523,14 @@ armor:register_armor("3d_armor:boots_walking", {
 	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
 })
 
+armor:register_armor("3d_armor:jacket_gambeson", {
+	description = S("Gambeson"),
+	inventory_image = "3d_armor_inv_jacket_gambeson.png",
+	groups = {armor_torso=1, armor_heal=0, armor_use=750},
+	armor_groups = {fleshy=26, pierce=8, slash=8, bludgeon=14},
+	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+})
+
 armor:register_armor("3d_armor:jacket_generals", {
 	description = S("General's Jacket"),
 	inventory_image = "3d_armor_inv_jacket_generals.png",
@@ -696,6 +704,15 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+	output = "3d_armor:jacket_gambeson",
+	recipe = {
+		{"default:comp_fabric 2", "", "default:comp_fabric 2"},
+		{"default:comp_fabric 2", "default:comp_fabric 2", "default:comp_fabric 2"},
+		{"default:comp_fabric 2", "default:comp_fabric 2", "default:comp_fabric 2"},
+	},
+}) 
+
+minetest.register_craft({
 	output = "3d_armor:jacket_generals",
 	recipe = {
 		{"default:comp_fabric", "dye:blue", "default:comp_fabric"},
@@ -703,6 +720,7 @@ minetest.register_craft({
 		{"default:comp_fabric", "default:brass_ingot", "default:comp_fabric"},
 	},
 })
+
 minetest.register_craft({
 	output = "3d_armor:trousers_generals",
 	recipe = {
