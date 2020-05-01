@@ -560,6 +560,21 @@ armor:register_armor("3d_armor:trousers_outlaws", {
 	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
 })
 
+armor:register_armor("3d_armor:hat_senators", {
+	description = S("Senator's Wreath"),
+	inventory_image = "3d_armor_inv_hat_senators.png",
+	groups = {armor_head=1, armor_heal=0, armor_use=1000},
+	armor_groups = {fleshy=2},
+	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+})
+armor:register_armor("3d_armor:jacket_senators", {
+	description = S("Senator's Robes"),
+	inventory_image = "3d_armor_inv_jacket_senators.png",
+	groups = {armor_torso=1, armor_heal=0, armor_use=1000},
+	armor_groups = {fleshy=12, slash=2, bludgeon=2},
+	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+})
+
 armor:register_armor("3d_armor:hat_turban", {
 	description = S("Turban"),
 	inventory_image = "3d_armor_inv_hat_turban.png",
@@ -718,5 +733,21 @@ minetest.register_craft({
 		{"default:comp_fabric", "group:metal_ingot", "default:comp_fabric"},
 		{"mobs:leather", "", "mobs:leather"},
 		{"mobs:leather", "", "mobs:leather"},
+	},
+})
+
+minetest.register_craft({
+	output = "3d_armor:hat_senators",
+	recipe = {
+		{"", "group:leaves", ""},
+		{"group:leaves", "", "group:leaves"},
+	},
+})
+minetest.register_craft({
+	output = "3d_armor:jacket_senators",
+	recipe = {
+		{"group:wool", "dye:violet", "group:wool"},
+		{"group:wool", "group:wool", "group:wool"},
+		{"group:wool", "group:wool", "group:wool"},
 	},
 })
