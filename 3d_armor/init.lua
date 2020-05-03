@@ -168,6 +168,10 @@ local function validate_armor_inventory(player)
 end
 
 local function init_player_armor(player)
+	if not player then
+		return false
+	end
+
 	local name = player:get_player_name()
 	local pos = player:get_pos()
 	if not name or not pos then
