@@ -168,7 +168,7 @@ local function validate_armor_inventory(player)
 end
 
 local function init_player_armor(player)
-	if not player then
+	if not player or not player:is_player() then
 		return false
 	end
 
