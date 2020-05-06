@@ -599,6 +599,21 @@ armor:register_armor("3d_armor:hat_turban", {
 	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
 })
 
+armor:register_armor("3d_armor:hat_oni", {
+	description = S("Oni Mask"),
+	inventory_image = "3d_armor_inv_hat_oni.png",
+	groups = {armor_head=1, armor_heal=0, armor_use=1000},
+	armor_groups = {fleshy=10, pierce=2, slash=2, bludgeon=4},
+	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+})
+
+armor:register_armor("3d_armor:hat_kitsune", {
+	description = S("Kitsune Mask"),
+	inventory_image = "3d_armor_inv_hat_kitsune.png",
+	groups = {armor_head=1, armor_heal=0, armor_use=1000},
+	armor_groups = {fleshy=10, pierce=2, slash=2, bludgeon=4},
+	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+})
 
 --- LEGACY ARMOUR
 
