@@ -583,6 +583,14 @@ armor:register_armor("3d_armor:jacket_senators", {
 	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
 })
 
+armor:register_armor("3d_armor:jacket_civtest", {
+	description = S("'Civtest' Leather Jacket"),
+	inventory_image = "3d_armor_inv_jacket_civtest.png",
+	groups = {armor_torso=1, armor_heal=0, armor_use=750},
+	armor_groups = {fleshy=20, pierce=6, slash=6, bludgeon=6},
+	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
+})
+
 armor:register_armor("3d_armor:hat_turban", {
 	description = S("Turban"),
 	inventory_image = "3d_armor_inv_hat_turban.png",
