@@ -122,7 +122,7 @@ if armor.materials.bronze then
 		inventory_image = "3d_armor_inv_helmet_bronze.png",
 		groups = {armor_head=1, armor_heal=0, armor_use=275,
 			physics_speed=-0.03, physics_gravity=0.01},
-		armor_groups = {fleshy=17},
+		armor_groups = {fleshy=17, pierce=10, slash=12, bludgeon=2},
 		damage_groups = {cracky=3, snappy=2, choppy=2, crumbly=1, level=2},
 	})
 	armor:register_armor("3d_armor:chestplate_bronze", {
@@ -130,7 +130,7 @@ if armor.materials.bronze then
 		inventory_image = "3d_armor_inv_chestplate_bronze.png",
 		groups = {armor_torso=1, armor_heal=0, armor_use=275,
 			physics_speed=-0.05, physics_gravity=0.04},
-		armor_groups = {fleshy=20},
+		armor_groups = {fleshy=20, pierce=12, slash=14, bludgeon=2},
 		damage_groups = {cracky=3, snappy=2, choppy=2, crumbly=1, level=2},
 	})
 	armor:register_armor("3d_armor:leggings_bronze", {
@@ -138,7 +138,7 @@ if armor.materials.bronze then
 		inventory_image = "3d_armor_inv_leggings_bronze.png",
 		groups = {armor_legs=1, armor_heal=0, armor_use=275,
 			physics_speed=-0.04, physics_gravity=0.03},
-		armor_groups = {fleshy=20},
+		armor_groups = {fleshy=20, pierce=10, slash=14, bludgeon=2},
 		damage_groups = {cracky=3, snappy=2, choppy=2, crumbly=1, level=2},
 	})
 	armor:register_armor("3d_armor:boots_bronze", {
@@ -146,7 +146,7 @@ if armor.materials.bronze then
 		inventory_image = "3d_armor_inv_boots_bronze.png",
 		groups = {armor_feet=1, armor_heal=0, armor_use=275,
 			physics_speed=-0.03, physics_gravity=0.01},
-		armor_groups = {fleshy=17},
+		armor_groups = {fleshy=17, pierce=10, slash=14, bludgeon=2},
 		damage_groups = {cracky=3, snappy=2, choppy=2, crumbly=1, level=2},
 	})
 end
@@ -157,7 +157,7 @@ if armor.materials.tin then
 		inventory_image = "3d_armor_inv_helmet_tin.png",
 		groups = {armor_head=1, armor_heal=0, armor_use=1250,
 			physics_speed=-0.02, physics_gravity=0.01},
-		armor_groups = {fleshy=16},
+		armor_groups = {fleshy=16, pierce=8, slash=10, bludgeon=2},
 		damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
 	})
 	armor:register_armor("3d_armor:chestplate_tin", {
@@ -165,7 +165,7 @@ if armor.materials.tin then
 		inventory_image = "3d_armor_inv_chestplate_tin.png",
 		groups = {armor_torso=1, armor_heal=0, armor_use=1500,
 			physics_speed=-0.04, physics_gravity=0.04},
-		armor_groups = {fleshy=19},
+		armor_groups = {fleshy=19, pierce=10, slash=11, bludgeon=2},
 		damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
 	})
 	armor:register_armor("3d_armor:leggings_tin", {
@@ -173,7 +173,7 @@ if armor.materials.tin then
 		inventory_image = "3d_armor_inv_leggings_tin.png",
 		groups = {armor_legs=1, armor_heal=0, armor_use=1500,
 			physics_speed=-0.04, physics_gravity=0.03},
-		armor_groups = {fleshy=18},
+		armor_groups = {fleshy=17, pierce=10, slash=10, bludgeon=2},
 		damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
 	})
 	armor:register_armor("3d_armor:boots_tin", {
@@ -181,7 +181,7 @@ if armor.materials.tin then
 		inventory_image = "3d_armor_inv_boots_tin.png",
 		groups = {armor_feet=1, armor_heal=0, armor_use=1250,
 			physics_speed=-0.02, physics_gravity=0.01},
-		armor_groups = {fleshy=16},
+		armor_groups = {fleshy=16, pierce=8, slash=10, bludgeon=2},
 		damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
 	})
 end
@@ -192,7 +192,7 @@ if armor.materials.copper then
 		inventory_image = "3d_armor_inv_helmet_copper.png",
 		groups = {armor_head=1, armor_heal=0, armor_use=400,
 			physics_speed=-0.03, physics_gravity=0.01},
-		armor_groups = {fleshy=15},
+		armor_groups = {fleshy=15, pierce=8, slash=8, bludgeon=2},
 		damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
 	})
 	armor:register_armor("3d_armor:chestplate_copper", {
@@ -200,7 +200,7 @@ if armor.materials.copper then
 		inventory_image = "3d_armor_inv_chestplate_copper.png",
 		groups = {armor_torso=1, armor_heal=0, armor_use=400,
 			physics_speed=-0.05, physics_gravity=0.04},
-		armor_groups = {fleshy=18},
+		armor_groups = {fleshy=18, pierce=10, slash=8, bludgeon=2},
 		damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
 	})
 	armor:register_armor("3d_armor:leggings_copper", {
@@ -208,7 +208,7 @@ if armor.materials.copper then
 		inventory_image = "3d_armor_inv_leggings_copper.png",
 		groups = {armor_legs=1, armor_heal=0, armor_use=400,
 			physics_speed=-0.04, physics_gravity=0.03},
-		armor_groups = {fleshy=18},
+		armor_groups = {fleshy=18, pierce=9, slash=8, bludgeon=2},
 		damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
 	})
 	armor:register_armor("3d_armor:boots_copper", {
@@ -216,7 +216,7 @@ if armor.materials.copper then
 		inventory_image = "3d_armor_inv_boots_copper.png",
 		groups = {armor_feet=1, armor_heal=0, armor_use=400,
 			physics_speed=-0.03, physics_gravity=0.01},
-		armor_groups = {fleshy=16},
+		armor_groups = {fleshy=15, pierce=8, slash=8, bludgeon=2},
 		damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
 	})
 end
@@ -227,7 +227,7 @@ if armor.materials.gold then
 		inventory_image = "3d_armor_inv_helmet_gold.png",
 		groups = {armor_head=1, armor_heal=0, armor_use=500,
 			physics_speed=-0.09, physics_gravity=0.02},
-		armor_groups = {fleshy=13},
+		armor_groups = {fleshy=13, pierce=6, slash=6, bludgeon=2},
 		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=3, level=2},
 	})
 	armor:register_armor("3d_armor:chestplate_gold", {
@@ -235,7 +235,7 @@ if armor.materials.gold then
 		inventory_image = "3d_armor_inv_chestplate_gold.png",
 		groups = {armor_torso=1, armor_heal=0, armor_use=650,
 			physics_speed=-0.14, physics_gravity=0.05},
-		armor_groups = {fleshy=15},
+		armor_groups = {fleshy=15, pierce=8, slash=7, bludgeon=5},
 		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=3, level=2},
 	})
 	armor:register_armor("3d_armor:leggings_gold", {
@@ -243,7 +243,7 @@ if armor.materials.gold then
 		inventory_image = "3d_armor_inv_leggings_gold.png",
 		groups = {armor_legs=1, armor_heal=0, armor_use=600,
 			physics_speed=-0.12, physics_gravity=0.04},
-		armor_groups = {fleshy=15},
+		armor_groups = {fleshy=15, pierce=6, slash=6, bludgeon=5},
 		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=3, level=2},
 	})
 	armor:register_armor("3d_armor:boots_gold", {
@@ -251,7 +251,7 @@ if armor.materials.gold then
 		inventory_image = "3d_armor_inv_boots_gold.png",
 		groups = {armor_feet=1, armor_heal=0, armor_use=550,
 			physics_speed=-0.08, physics_gravity=0.02},
-		armor_groups = {fleshy=13},
+		armor_groups = {fleshy=13, pierce=6, slash=6, bludgeon=4},
 		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=3, level=2},
 	})
 end
@@ -261,32 +261,103 @@ if armor.materials.cloth then
 		description = S("Cloth Helmet"),
 		inventory_image = "3d_armor_inv_helmet_cloth.png",
 		groups = {armor_head=1, armor_heal=0, armor_use=900,
-			physics_speed=0.01},
-		armor_groups = {fleshy=11},
+			physics_speed=0.02},
+		armor_groups = {fleshy=11, pierce=1, slash=2, bludgeon=6},
 		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=2, level=1},
 	})
 	armor:register_armor("3d_armor:chestplate_cloth", {
 		description = S("Cloth Chestplate"),
 		inventory_image = "3d_armor_inv_chestplate_cloth.png",
 		groups = {armor_torso=1, armor_heal=0, armor_use=900,
-			physics_speed=0.01},
-		armor_groups = {fleshy=13},
+			physics_speed=0.02},
+		armor_groups = {fleshy=13, pierce=1, slash=2, bludgeon=7},
 		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=2, level=1},
 	})
 	armor:register_armor("3d_armor:leggings_cloth", {
 		description = S("Cloth Leggings"),
 		inventory_image = "3d_armor_inv_leggings_cloth.png",
 		groups = {armor_legs=1, armor_heal=0, armor_use=900,
-			physics_speed=0.01},
-		armor_groups = {fleshy=13},
+			physics_speed=0.02},
+		armor_groups = {fleshy=13, pierce=1, slash=2, bludgeon=7},
 		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=2, level=1},
 	})
 	armor:register_armor("3d_armor:boots_cloth", {
 		description = S("Cloth Boots"),
 		inventory_image = "3d_armor_inv_boots_cloth.png",
 		groups = {armor_feet=1, armor_heal=0, armor_use=900,
-			physics_speed=0.07, physics_gravity=-0.05},
-		armor_groups = {fleshy=11},
+			physics_speed=0.07, physics_gravity=-0.06},
+		armor_groups = {fleshy=11, pierce=1, slash=2, bludgeon=5},
+		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=2, level=1},
+	})
+end
+
+---FABRIC/HIDE ARMOUR
+if armor.materials_fabric.lizardskin then
+	armor:register_armor("3d_armor:hat_lizardskin", {
+		description = S("Lizardskin Mask"),
+		inventory_image = "3d_armor_inv_hat_lizardskin.png",
+		groups = {armor_head=1, armor_heal=0, armor_use=700,
+			physics_speed=0.01},
+		armor_groups = {fleshy=14, pierce=2, slash=6, bludgeon=8},
+		damage_groups = {cracky=1, snappy=2, choppy=3, crumbly=2, level=1},
+	})
+	armor:register_armor("3d_armor:jacket_lizardskin", {
+		description = S("Lizardskin Jacket"),
+		inventory_image = "3d_armor_inv_jacket_lizardskin.png",
+		groups = {armor_torso=1, armor_heal=0, armor_use=700,
+			physics_speed=0.01},
+		armor_groups = {fleshy=15, pierce=2, slash=8, bludgeon=10},
+		damage_groups = {cracky=1, snappy=2, choppy=3, crumbly=2, level=1},
+	})
+	armor:register_armor("3d_armor:leggings_lizardskin", {
+		description = S("Lizardskin Leggings"),
+		inventory_image = "3d_armor_inv_leggings_lizardskin.png",
+		groups = {armor_legs=1, armor_heal=0, armor_use=700,
+			physics_speed=0.01},
+		armor_groups = {fleshy=14, pierce=2, slash=6, bludgeon=7},
+		damage_groups = {cracky=1, snappy=2, choppy=3, crumbly=2, level=1},
+	})
+	armor:register_armor("3d_armor:boots_lizardskin", {
+		description = S("Lizardskin Boots"),
+		inventory_image = "3d_armor_inv_boots_lizardskin.png",
+		groups = {armor_feet=1, armor_heal=0, armor_use=700,
+			physics_speed=0.05, physics_gravity=-0.03},
+		armor_groups = {fleshy=13, pierce=2, slash=6, bludgeon=8},
+		damage_groups = {cracky=1, snappy=2, choppy=3, crumbly=2, level=1},
+	})
+end
+
+if armor.materials_fabric.cowhide then
+	armor:register_armor("3d_armor:hat_cowhide", {
+		description = S("Cowhide Hat"),
+		inventory_image = "3d_armor_inv_hat_cowhide.png",
+		groups = {armor_head=1, armor_heal=0, armor_use=400,
+			physics_speed=0.01},
+		armor_groups = {fleshy=18, pierce=2, slash=2, bludgeon=5},
+		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=2, level=1},
+	})
+	armor:register_armor("3d_armor:jacket_cowhide", {
+		description = S("Cowhide Jacket"),
+		inventory_image = "3d_armor_inv_chestplate_cloth.png",
+		groups = {armor_torso=1, armor_heal=0, armor_use=400,
+			physics_speed=0.01},
+		armor_groups = {fleshy=20, pierce=2, slash=2, bludgeon=6},
+		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=2, level=1},
+	})
+	armor:register_armor("3d_armor:leggings_cowhide", {
+		description = S("Cowhide Leggings"),
+		inventory_image = "3d_armor_inv_leggings_cowhide.png",
+		groups = {armor_legs=1, armor_heal=0, armor_use=400,
+			physics_speed=0.01},
+		armor_groups = {fleshy=19, pierce=2, slash=2, bludgeon=5},
+		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=2, level=1},
+	})
+	armor:register_armor("3d_armor:boots_cowhide", {
+		description = S("Cowhide Boots"),
+		inventory_image = "3d_armor_inv_boots_cloth.png",
+		groups = {armor_feet=1, armor_heal=0, armor_use=400,
+			physics_speed=0.02, physics_gravity=-0.01},
+		armor_groups = {fleshy=18, pierce=2, slash=2, bludgeon=5},
 		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=2, level=1},
 	})
 end
@@ -527,7 +598,7 @@ armor:register_armor("3d_armor:jacket_gambeson", {
 	description = S("Gambeson"),
 	inventory_image = "3d_armor_inv_jacket_gambeson.png",
 	groups = {armor_torso=1, armor_heal=0, armor_use=750},
-	armor_groups = {fleshy=26, pierce=8, slash=8, bludgeon=14},
+	armor_groups = {fleshy=22, pierce=4, slash=4, bludgeon=14},
 	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
 })
 
@@ -701,6 +772,40 @@ for k, v in pairs(armor.materials) do
 		},
 	})
 end
+--fabric armour
+for k, v in pairs(armor.materials_fabric) do
+	minetest.register_craft({
+		output = "3d_armor:hat_"..k,
+		recipe = {
+			{v, v, v},
+			{v, "", v},
+			{"", "", ""},
+		},
+	})
+	minetest.register_craft({
+		output = "3d_armor:jacket_"..k,
+		recipe = {
+			{v, "", v},
+			{v, v, v},
+			{v, v, v},
+		},
+	})
+	minetest.register_craft({
+		output = "3d_armor:leggings_"..k,
+		recipe = {
+			{v, v, v},
+			{v, "", v},
+			{v, "", v},
+		},
+	})
+	minetest.register_craft({
+		output = "3d_armor:boots_"..k,
+		recipe = {
+			{v, "", v},
+			{v, "", v},
+		},
+	})
+end
 
 minetest.register_craft({
 	output = "3d_armor:boots_leather",
@@ -722,7 +827,7 @@ minetest.register_craft({
 	output = "3d_armor:boots_walking",
 	recipe = {
 		{"default:comp_fabric", "", "default:comp_fabric"},
-		{"mobs:leather", "", "mobs:leather"},
+		{"mobs:rabbit_hide", "", "mobs:rabbit_hide"},
 	},
 })
 

@@ -71,6 +71,15 @@ for material, _ in pairs(armor.materials_advanced) do
 	end
 end
 
+for material, _ in pairs(armor.materials_fabric) do
+	local key = "material_fabric_"..material
+	if armor.config[key] == false then
+		armor.materials_fabric[material] = nil
+	end
+end
+
+
+
 -- Mod Compatibility
 
 if minetest.get_modpath("technic") then

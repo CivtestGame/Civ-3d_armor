@@ -56,6 +56,10 @@ armor = {
 		steel = "default:steel_ingot",
 		fine_steel = "default:fine_steel_ingot"
 	},
+        materials_fabric= {
+		lizardskin = "mobs:lizardskin",
+		cowhide = "mobs:cowhide"
+	},
 	fire_nodes = {
 		{"default:lava_source",     5, 8},
 		{"default:lava_flowing",    5, 8},
