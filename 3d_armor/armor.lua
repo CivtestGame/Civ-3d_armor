@@ -646,6 +646,7 @@ armor:register_armor("3d_armor:hat_senators", {
 	armor_groups = {fleshy=2},
 	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
 })
+
 armor:register_armor("3d_armor:jacket_senators", {
 	description = S("Senator's Robes"),
 	inventory_image = "3d_armor_inv_jacket_senators.png",
@@ -683,6 +684,13 @@ armor:register_armor("3d_armor:hat_kitsune", {
 	inventory_image = "3d_armor_inv_hat_kitsune.png",
 	groups = {armor_head=1, armor_heal=0, armor_use=1000},
 	armor_groups = {fleshy=10, pierce=2, slash=2, bludgeon=4},
+})
+
+armor:register_armor("3d_armor:hat_alpha", {
+	description = S("Alpha Hat"),
+	inventory_image = "3d_armor_inv_hat_alpha.png",
+	groups = {armor_head=1, armor_heal=0},
+	armor_groups = {fleshy=2},
 	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
 })
 
@@ -838,7 +846,7 @@ minetest.register_craft({
 		{"default:comp_fabric 2", "default:comp_fabric 2", "default:comp_fabric 2"},
 		{"default:comp_fabric 2", "default:comp_fabric 2", "default:comp_fabric 2"},
 	},
-}) 
+})
 
 minetest.register_craft({
 	output = "3d_armor:jacket_generals",
