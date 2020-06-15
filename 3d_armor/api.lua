@@ -560,6 +560,11 @@ end
 armor.drop_armor = function(pos, stack)
 	local node = minetest.get_node_or_nil(pos)
 	if node then
+		local def = stack:get_definition()
+		if def and def.groups and def.groups.undroppable then
+			return
+		end
+
 		local obj = minetest.add_item(pos, stack)
 		if obj then
 			obj:setvelocity({x=math.random(-1, 1), y=5, z=math.random(-1, 1)})

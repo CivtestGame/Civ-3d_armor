@@ -689,7 +689,7 @@ armor:register_armor("3d_armor:hat_kitsune", {
 armor:register_armor("3d_armor:hat_alpha", {
 	description = S("Alpha Hat"),
 	inventory_image = "3d_armor_inv_hat_alpha.png",
-	groups = {armor_head=1, armor_heal=0},
+	groups = {armor_head=1, armor_heal=0, undroppable=1},
 	armor_groups = {fleshy=2},
 	damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
 })
