@@ -261,7 +261,7 @@ if armor.materials.cloth then
 		description = S("Cloth Helmet"),
 		inventory_image = "3d_armor_inv_helmet_cloth.png",
 		groups = {armor_head=1, armor_heal=0, armor_use=900,
-			physics_speed=0.02},
+			physics_speed=0.02, gildable=1},
 		armor_groups = {fleshy=11, pierce=1, slash=2, bludgeon=6},
 		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=2, level=1},
 	})
@@ -269,7 +269,7 @@ if armor.materials.cloth then
 		description = S("Cloth Chestplate"),
 		inventory_image = "3d_armor_inv_chestplate_cloth.png",
 		groups = {armor_torso=1, armor_heal=0, armor_use=900,
-			physics_speed=0.02},
+			physics_speed=0.02, gildable=1},
 		armor_groups = {fleshy=13, pierce=1, slash=2, bludgeon=7},
 		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=2, level=1},
 	})
@@ -277,7 +277,7 @@ if armor.materials.cloth then
 		description = S("Cloth Leggings"),
 		inventory_image = "3d_armor_inv_leggings_cloth.png",
 		groups = {armor_legs=1, armor_heal=0, armor_use=900,
-			physics_speed=0.02},
+			physics_speed=0.02, gildable=1},
 		armor_groups = {fleshy=13, pierce=1, slash=2, bludgeon=7},
 		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=2, level=1},
 	})
@@ -285,7 +285,7 @@ if armor.materials.cloth then
 		description = S("Cloth Boots"),
 		inventory_image = "3d_armor_inv_boots_cloth.png",
 		groups = {armor_feet=1, armor_heal=0, armor_use=900,
-			physics_speed=0.07, physics_gravity=-0.06},
+			physics_speed=0.07, physics_gravity=-0.06, gildable=1},
 		armor_groups = {fleshy=11, pierce=1, slash=2, bludgeon=5},
 		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=2, level=1},
 	})
@@ -295,7 +295,7 @@ if armor.materials.cloth then
 		description = S("Cloth Helmet (Gilded)"),
 		inventory_image = "3d_armor_inv_helmet_cloth_g.png",
 		groups = {armor_head=1, armor_heal=0, armor_use=900,
-			physics_speed=0.02},
+			physics_speed=0.02, undroppable=1},
 		armor_groups = {fleshy=11, pierce=1, slash=2, bludgeon=6},
 		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=2, level=1},
 	})
@@ -303,7 +303,7 @@ if armor.materials.cloth then
 		description = S("Cloth Chestplate (Gilded)"),
 		inventory_image = "3d_armor_inv_chestplate_cloth_g.png",
 		groups = {armor_torso=1, armor_heal=0, armor_use=900,
-			physics_speed=0.02},
+			physics_speed=0.02, undroppable=1},
 		armor_groups = {fleshy=13, pierce=1, slash=2, bludgeon=7},
 		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=2, level=1},
 	})
@@ -311,7 +311,7 @@ if armor.materials.cloth then
 		description = S("Cloth Leggings (Gilded)"),
 		inventory_image = "3d_armor_inv_leggings_cloth_g.png",
 		groups = {armor_legs=1, armor_heal=0, armor_use=900,
-			physics_speed=0.02},
+			physics_speed=0.02, undroppable=1},
 		armor_groups = {fleshy=13, pierce=1, slash=2, bludgeon=7},
 		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=2, level=1},
 	})
@@ -319,7 +319,7 @@ if armor.materials.cloth then
 		description = S("Cloth Boots (Gilded)"),
 		inventory_image = "3d_armor_inv_boots_cloth_g.png",
 		groups = {armor_feet=1, armor_heal=0, armor_use=900,
-			physics_speed=0.07, physics_gravity=-0.06},
+			physics_speed=0.07, physics_gravity=-0.06, undroppable=1},
 		armor_groups = {fleshy=11, pierce=1, slash=2, bludgeon=5},
 		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=2, level=1},
 	})
