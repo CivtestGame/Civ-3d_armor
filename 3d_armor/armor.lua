@@ -289,6 +289,41 @@ if armor.materials.cloth then
 		armor_groups = {fleshy=11, pierce=1, slash=2, bludgeon=5},
 		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=2, level=1},
 	})
+
+
+	armor:register_armor("3d_armor:helmet_cloth_g", {
+		description = S("Cloth Helmet (Gilded)"),
+		inventory_image = "3d_armor_inv_helmet_cloth_g.png",
+		groups = {armor_head=1, armor_heal=0, armor_use=900,
+			physics_speed=0.02},
+		armor_groups = {fleshy=11, pierce=1, slash=2, bludgeon=6},
+		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=2, level=1},
+	})
+	armor:register_armor("3d_armor:chestplate_cloth_g", {
+		description = S("Cloth Chestplate (Gilded)"),
+		inventory_image = "3d_armor_inv_chestplate_cloth_g.png",
+		groups = {armor_torso=1, armor_heal=0, armor_use=900,
+			physics_speed=0.02},
+		armor_groups = {fleshy=13, pierce=1, slash=2, bludgeon=7},
+		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=2, level=1},
+	})
+	armor:register_armor("3d_armor:leggings_cloth_g", {
+		description = S("Cloth Leggings (Gilded)"),
+		inventory_image = "3d_armor_inv_leggings_cloth_g.png",
+		groups = {armor_legs=1, armor_heal=0, armor_use=900,
+			physics_speed=0.02},
+		armor_groups = {fleshy=13, pierce=1, slash=2, bludgeon=7},
+		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=2, level=1},
+	})
+	armor:register_armor("3d_armor:boots_cloth_g", {
+		description = S("Cloth Boots (Gilded)"),
+		inventory_image = "3d_armor_inv_boots_cloth_g.png",
+		groups = {armor_feet=1, armor_heal=0, armor_use=900,
+			physics_speed=0.07, physics_gravity=-0.06},
+		armor_groups = {fleshy=11, pierce=1, slash=2, bludgeon=5},
+		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=2, level=1},
+	})
+
 end
 
 ---FABRIC/HIDE ARMOUR
