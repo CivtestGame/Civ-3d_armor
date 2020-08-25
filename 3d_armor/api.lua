@@ -464,10 +464,13 @@ armor.get_armor_formspec = function(self, name, listring)
 	local formspec = armor.formspec..
 		"list[detached:"..name.."_armor;armor;0,0.5;2,3;]"
 	if listring == true then
-		formspec = formspec.."listring[current_player;main]"..
-			"listring[detached:"..name.."_armor;armor]"..
-			"listring[current_player;main2]"..
-			"listring[detached:"..name.."_armor;armor]"
+		formspec = formspec..
+                   "listring[detached:"..name.."_armor;armor]"..
+                   "listring[current_player;router]"..
+                   "listring[current_player;main2]"..
+                   "listring[detached:"..name.."_armor;armor]"..
+                   "listring[current_player;main]"..
+                   "listring[detached:"..name.."_armor;armor]"
 	end
 	formspec = formspec:gsub("armor_preview", armor.textures[name].preview)
 	formspec = formspec:gsub("armor_level", armor.def[name].level)

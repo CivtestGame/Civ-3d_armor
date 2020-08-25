@@ -162,10 +162,11 @@ local function validate_armor_inventory(player)
 				-- inventory but could open up the possibity for a hacked client
 				-- to receive items back they never really had. I am not certain
 				-- so remove the is_singleplayer check at your own risk :]
-				if minetest.is_singleplayer() and player_inv and
-						player_inv:room_for_item("main", stack) then
-					player_inv:add_item("main", stack)
-				end
+
+                                local leftover = player_api.give_item(player, stack)
+                                if leftover and not leftover:is_empty() then
+                                   minetest.add_item(player:get_pos(), stack)
+                                end
 			end
 		end
 	end
